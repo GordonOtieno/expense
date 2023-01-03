@@ -4,5 +4,6 @@ class Expense < ApplicationRecord
   has_many :group_expenses, dependent: :destroy
 
   validates :amount, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :name, presence: true, length: { in: 3..100 }
+  validates :name, presence: true, length: { in: 2..100 }
 end
+
