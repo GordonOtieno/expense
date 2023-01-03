@@ -14,30 +14,30 @@
  </div>
  <p></p>
  <% @total = 0 %>
- <% @group.group_expenses.each { |e| @total +=e.expense.amount }%>
+ <% @group.group_shops.each { |e| @total +=e.shop.amount }%>
  <p class='text-end col-3'>Total: $<%= @total %></p>
  </div>
 
-  <% if @group_expenses.size > 0 %>
+  <% if @group_shops.size > 0 %>
   <div id='groups' class='p-2'>
-  <% @group_expenses.each do |gr| %>
+  <% @group_shops.each do |gr| %>
 
   <div class="main d-flex justify-content-between align-items border bg-light mt-2 mb-2 p-1">
         <div class="d-flex flex-column">
           <p>
-            <%= gr.expense.name %>
+            <%= gr.shop.name %>
           </p>
           <small class='text-secondary'>
             <%= gr.created_at.strftime("%d %h %Y")%> at <%=gr.created_at.strftime("%l.%M%P")%>
           </small>
         </div>
-        <p class='font-weight-bold font-italic'>$<%= gr.expense.amount %></p>
+        <p class='font-weight-bold font-italic'>$<%= gr.shop.amount %></p>
       </div>
     <% end %>
   <% else %>
-    <p class="p-2">No expense added yet for this category</p>
+    <p class="p-2">No Expense added yet for this category</p>
   <% end %>
   <div class="text-light footer d-flex justify-content-center p-3">
-    <%= link_to "Add new expense", new_group_expense_path, class: 'btn border border-dark p-2' %>
+    <%= link_to "Add new expense", new_group_shop_path, class: 'btn border border-dark p-2' %>
   </div>
 </div>

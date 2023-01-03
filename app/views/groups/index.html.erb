@@ -23,7 +23,7 @@
     </div>
     <p></p>
     <% @total =0 %>
-    <% group.group_expenses.each { |e| @total += e.expense.amount }%>
+    <% group.group_shops.each { |e| @total += e.shop.amount }%>
     <p class='text-end col-3'>Total: $ <%= @total %></p>
 </div>
     <% end %>

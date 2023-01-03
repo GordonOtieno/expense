@@ -1,0 +1,21 @@
+<%= form_with model: @shop, url: group_shops_url, method: :post do |form| %>
+    <div class= "bg-primary d-flex justify-content-between text-light pe-5">
+    <%= link_to root_path, class: 'text-light h1 ps-4' do %>
+        <i class="bi bi-arrow-left"></i>
+    <% end %>
+    <p class='fw-bolder h2'>ADD NEW EXPENSES</p>
+    <%= form.submit 'Save', class: "btn btn-primary fw-bold px-5"%>
+    </div>
+    <div class='p-2'>
+    <%= form.text_field :name, class:'form-control', placeholder: 'Name', required: true%>
+    </div>
+    <div class='p-2'>
+    <%= form.text_field :amount, class:'form-control', placeholder: 'Amount', required: true%>
+    </div>
+    <div class='p-2'>
+    <%= select_tag 'group', options_for_select(@groups.map { |group| [group.name, group.id]}),
+     {promp: 'Select Category', require:true,
+     class: 'col-12 p-2 border rounded dropdown-toggle'} %>
+    </div>
+
+<% end %>

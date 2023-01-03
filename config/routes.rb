@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'group_shops/new'
+  get 'group_shops/create'
   devise_for :users
 
   resources :groups
-  resources :group_expenses
-  resources :expenses
+  resources :group_shops
+  resources :shops
 
   authenticated :user do
     root to: 'groups#index'
