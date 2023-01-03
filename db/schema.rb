@@ -14,6 +14,15 @@ ActiveRecord::Schema[7.0].define(version: 20_230_103_162_551) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
+  create_table 'expenses', force: :cascade do |t|
+    t.string 'name'
+    t.integer 'amount'
+    t.bigint 'author_id', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['author_id'], name: 'index_expenses_on_author_id'
+  end
+
   create_table 'group_shops', force: :cascade do |t|
     t.bigint 'group_id', null: false
     t.bigint 'shop_id', null: false
@@ -41,15 +50,6 @@ ActiveRecord::Schema[7.0].define(version: 20_230_103_162_551) do
     t.index ['author_id'], name: 'index_shops_on_author_id'
   end
 
-  create_table 'usage', force: :cascade do |t|
-    t.string 'name'
-    t.integer 'amount'
-    t.bigint 'author_id', null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['author_id'], name: 'index_usage_on_author_id'
-  end
-
   create_table 'users', force: :cascade do |t|
     t.string 'name'
     t.datetime 'created_at', null: false
@@ -63,10 +63,10 @@ ActiveRecord::Schema[7.0].define(version: 20_230_103_162_551) do
     t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
   end
 
+  add_foreign_key 'expenses', 'users', column: 'author_id'
   add_foreign_key 'group_shops', 'groups'
   add_foreign_key 'group_shops', 'shops'
   add_foreign_key 'groups', 'users', column: 'author_id'
   add_foreign_key 'shops', 'users', column: 'author_id'
-  add_foreign_key 'usage', 'users', column: 'author_id'
 end
 # rubocop:enable Metrics/BlockLength
