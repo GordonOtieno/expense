@@ -1,6 +1,6 @@
 class GroupExpensesController < ApplicationController
   def new
-     @expense = Expense.new
+    @expense = Expense.new
     @groups = Group.where(author_id: current_user.id)
   end
 
