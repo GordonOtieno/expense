@@ -62,7 +62,7 @@ After you're finished please remove all the comments and instructions!
 
 > 
 
-**Expense Tracker** is a is a budget tracher app that allows one to keep track of all the expenditures on all commodities in a given category.
+**Expense Tracker** is a is a budget tracker app that allows one to keep track of the expenditures on a given commodities in a particular category.
 
 ## 🛠 Built With <a name="built-with"></a>
 
