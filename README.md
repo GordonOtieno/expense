@@ -219,7 +219,6 @@ If you like this project please give it a star and follow me on my github page.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-
 I would like to thank Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

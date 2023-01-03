@@ -1,8 +1,4 @@
 class GroupExpensesController < ApplicationController
-  def index; end
-
-  def show; end
-
   def new
     @expense = Expense.new
     @groups = Group.where(author_id: current_user.id)
@@ -17,8 +13,6 @@ class GroupExpensesController < ApplicationController
       flash[:notice] = 'Error during creation'
     end
   end
-
-  def update; end
 
   protected
 
