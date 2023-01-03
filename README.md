@@ -188,7 +188,7 @@ To run tests, run the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Gordon Otieno**
 
 - GitHub: [@gordonotieno](https://github.com/GordonOtieno)
 - Twitter: [@GordonOtieno](https://twitter.com/GordonO34459259)
