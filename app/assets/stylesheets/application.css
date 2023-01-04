@@ -1,0 +1,17 @@
+.home_container {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 86vh;
+}
+
+.menu {
+  list-style: none;
+}
+
+.logout-button:hover {
+  background-color: #0d6efd;
+}
+
+.search-icon {
+  color: white;
+}
