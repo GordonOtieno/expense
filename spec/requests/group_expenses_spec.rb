@@ -10,8 +10,5 @@ RSpec.describe 'GroupExpense  test', type: :feature do
       click_button 'Log in'
       Group.create(author_id: user.id, name: 'Proteinss', icon: 'randomuser.me/api/portraits/women/86.jpg')
     end
-    # it 'should display meassage' do
-    #   expect(page).to have_content('Proteins')
-    # end
   end
 end
