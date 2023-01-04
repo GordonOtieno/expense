@@ -196,6 +196,16 @@ To run tests, run the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🔭 Future Features <a name="future-features"></a>
+
+-  **[Live Demo Of Project Features](https://www.loom.com/share/a9fdbe5a804c48a6bae5699f35b7feec)**
+-  **Users can register**
+-  **Users can add Categories**
+-  **Users can monitor ther expenditures on each category**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
